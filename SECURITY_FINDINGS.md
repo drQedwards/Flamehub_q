@@ -47,7 +47,7 @@ The response correctly sets `x-consent-layer: 4` and `x-classification: private`
 
 ### [CRITICAL] No Integrity Verification Before Executing Cloned Content
 
-**File**: `install.sh`, Step 3 (lines ~`for repo in "${REPOS[@]}"`)  
+**File**: `install.sh`, Step 3 (lines ~`for repo in "${REPOS[@]}"`)
 **Impact**: Supply chain attack — compromised FlameHub server delivers malicious bootstrap scripts
 
 The installer clones three repos and immediately copies their content into `~/.flamenet/`:
@@ -166,7 +166,7 @@ The manifest correctly excludes `keys/` (private key files). However, `config/no
 ## Summary Table
 
 | ID | Component | Severity | Issue |
-|----|-----------|----------|-------|
+|----|-----------|----------|---------|
 | F1 | FlameHub API | HIGH | Server filesystem paths in `/flamehub-api/repos` response |
 | F2 | FlameHub API | MEDIUM | 451 response on git endpoint has no actionable body |
 | F3 | install.sh | CRITICAL | No integrity verification of cloned repos before use |
